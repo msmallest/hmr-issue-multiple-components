@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { AComponent } from './a.component';
 import { BComponent } from './b.component';
 import { CComponent } from './c.component';
@@ -10,10 +10,12 @@ import { CComponent } from './c.component';
     <app-a />
     <app-b />
     <app-c />
+
+    {{version.full}}
   `,
   styleUrl: './app.component.scss',
   imports: [AComponent, BComponent, CComponent],
 })
 export class AppComponent {
-  title = 'hmr-issue-multiple-components';
+  version = VERSION;
 }
