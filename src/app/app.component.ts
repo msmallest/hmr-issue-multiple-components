@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { AComponent } from './a.component';
+import { BComponent } from './b.component';
+import { CComponent } from './c.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  // templateUrl: './app.component.html',
+  template: `
+    <app-a />
+    <app-b />
+    <app-c />
+  `,
+  styleUrl: './app.component.scss',
+  imports: [AComponent, BComponent, CComponent],
 })
 export class AppComponent {
   title = 'hmr-issue-multiple-components';
